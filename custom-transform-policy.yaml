@@ -1,0 +1,28 @@
+id: Custom Transform
+name: Custom Transform
+description: Modifies the payload and/or the status code
+category: Custom Transform
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration:
+  - propertyName: statusCode
+    name: Status Code
+    type: int
+    minimumValue: 0
+    maximumValue: 999
+    description: Status code to return when the condition is met.
+    optional: true
+    sensitive: false
+    allowMultiple: false
+  - propertyName: payload
+    name: Payload
+    type: expression
+    description: Expression that sets the payload to return when the condition is met.
+    optional: true
+    sensitive: false
+    allowMultiple: false
+
